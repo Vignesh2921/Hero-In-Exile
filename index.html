@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERO IN EXILE | Pro Action Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="logo">⚔️ HERO <span>IN EXILE</span></div>
+    <div class="stats">
+      <div class="stat">❤️ HP <b id="hpText">100</b></div>
+      <div class="stat">⭐ SCORE <b id="scoreText">0</b></div>
+      <div class="stat">🏆 LEVEL <b id="levelText">1</b></div>
+      <div class="stat">🎯 TARGET <b id="targetText">5</b></div>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="game-wrap">
+      <canvas id="gameCanvas" width="900" height="480"></canvas>
+      <div id="overlay" class="overlay">
+        <h1>HERO IN EXILE</h1>
+        <p>Exiled Prince. Lost Kingdom. One Last Fight.</p>
+        <p class="rules">Level 1: Defeat 5 Enemies | Level 2: Defeat 7 Enemies | Level 3: Defeat 10 Enemies To Win</p>
+        <button id="startBtn">▶ START QUEST</button>
+        <small>Controls: Left Right to Move | Space to Attack | Up to Jump | Avoid Enemy Attack To Save HP</small>
+      </div>
+      <div class="hud-bottom">
+        <div id="msg">Defeat 5 Enemies To Clear Level 1</div>
+        <div class="hp-bar"><div id="hpFill"></div></div>
+      </div>
+    </section>
+    <aside class="panel">
+      <h3>🎮 HOW TO PLAY</h3>
+      <ul>
+        <li><b>Left / Right</b> - Move Hero</li>
+        <li><b>Space</b> - Sword Attack</li>
+        <li><b>Up</b> - Jump To Dodge</li>
+      </ul>
+      <h3>📜 STORY</h3>
+      <p>Prince Arjun was exiled from his kingdom. Enemies are guarding the kingdom. Defeat all enemies in 3 levels to reclaim the throne.</p>
+      <h3>⚕️ HP RULES</h3>
+      <ul>
+        <li>Enemy Touch = HP Decreases</li>
+        <li>Enemy Passes You = HP -10</li>
+        <li>Enemy Hits You = HP -15</li>
+        <li>Level Clear = HP +20</li>
+      </ul>
+      <h3>🏆 WIN / LOSE</h3>
+      <ul>
+        <li><b>WIN:</b> Clear All 3 Levels</li>
+        <li><b>LOSE:</b> HP Becomes 0</li>
+      </ul>
+      <div class="controls">
+        <button id="btnLeft">⬅️</button>
+        <button id="btnJump">⬆️ JUMP</button>
+        <button id="btnRight">➡️</button>
+        <button id="btnAttack">⚔️ ATTACK</button>
+      </div>
+      <button id="restartBtn" class="secondary">🔄 RESTART</button>
+    </aside>
+  </main>
+  <footer>Hero In Exile • Pro Project • 2026</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
